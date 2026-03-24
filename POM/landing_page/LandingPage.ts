@@ -23,6 +23,8 @@ export class LandingPage extends BasePage{
     seeFeaturesButton: Button
 
     //grid cards
+    gridCards: GridCard[]
+
     rosterManagement: GridCard
     raidCompositions: GridCard
     lootSheets: GridCard
@@ -45,7 +47,7 @@ export class LandingPage extends BasePage{
         this.upperGetStartedButton = new Button(page, `//div[@class='flex items-center gap-4']//a[@href="/get-started"]`)
         this.lowerGetStartedButton = new Button(page, `//section[@class='px-8 py-24']//a[@href="/get-started"]`)
         this.seeFeaturesButton = new Button(page, `//a[@href="#features"]`)
-        this.whatsInsideText = new BaseElement(page, "//p[contains(normalize-space(), 'What')]")
+        this.whatsInsideText = new BaseElement(page, `//p[contains(text(), concat("What", "'", "s inside"))]`)
         this.builtForOfficersText = new BaseElement(page, "//h2[contains(text(), 'Built for officers,')]")
         this.rosterManagement = new GridCard(page, "Roster Management")
         this.raidCompositions = new GridCard(page, "Raid Compositions")
@@ -55,6 +57,18 @@ export class LandingPage extends BasePage{
         this.multiGuildSupport = new GridCard(page, "Multi-guild Support")
         this.readyToCookText = new BaseElement(page, "//h2[contains(normalize-space(), 'Ready to cook?')]")
         this.connectAccountText = new BaseElement(page, "//p[contains(normalize-space(), 'Connect your Battle.net')]")
+
+        //Add more grid cards here
+        this.gridCards = [
+            
+            this.rosterManagement,
+            this.raidCompositions,
+            this.lootSheets,
+            this.permissionControl,
+            this.battleNetSync,
+            this.multiGuildSupport,
+    ]
+
     }
 
     async clickUpperGetStartedButton(): Promise<void>{

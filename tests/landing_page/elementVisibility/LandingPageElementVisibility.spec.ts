@@ -6,7 +6,7 @@ test.describe("Landing Page - Element visibility", ()=>{
         await pageSection.landingPage.navigateTo()
     })
 
-    test.only("01. Text elements visibility", async({pageSection})=>{
+    test("01. Text elements visibility", async({pageSection})=>{
         await step("Step 1: Assert guild management title is visible", async()=>{
             await pageSection.landingPage.guildManagementTitle.shouldBeVisibleSoft()
         })
@@ -43,5 +43,22 @@ test.describe("Landing Page - Element visibility", ()=>{
             await pageSection.landingPage.connectAccountText.shouldBeVisibleSoft()
             await pageSection.landingPage.lowerGetStartedButton.shouldBeVisibleSoft()
         })
+    })
+
+    test("02. Grid cards visibility", async({pageSection})=>{
+        await step("Step 1: Scroll to 'What's inside' text", async()=>{
+            await pageSection.landingPage.whatsInsideText.scrollIntoView()
+        })
+
+        //Looping through all the details of each card
+        for (const [index, card] of pageSection.landingPage.gridCards.entries()) {
+            await step(`Step ${index + 2}: Assert '${card.name}' details are visible`, async () => {
+                await card.cardImage.shouldBeVisibleSoft()
+                await card.cardTitle.shouldBeVisibleSoft()
+                await card.cardDescription.shouldBeVisibleSoft()
+            })
+        }
+
+       
     })
 })
