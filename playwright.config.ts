@@ -34,7 +34,7 @@ export default defineConfig({
 
   // ── Shared browser settings ─────────────────────────────────────────────────
   use: {
-    baseURL: process.env.BASE_URL ?? "http://localhost:3000",
+    baseURL: process.env.BASE_URL ?? "http://localhost:4321/",
 
     // Screenshot on failure – attached to Allure at the failing step
     screenshot: "only-on-failure",
@@ -46,7 +46,7 @@ export default defineConfig({
     video: "on-first-retry",
 
     // Viewport
-    viewport: { width: 1280, height: 720 },
+    viewport: { width: 1920, height: 1080 },
 
     // Keep browser context around for step-level attachment hooks
     actionTimeout: 15_000,

@@ -16,36 +16,65 @@ export class BaseElement {
 
   // ─── Actions ────────────────────────────────────────────────────────────────
 
-  async click(): Promise<void> {
-    logger.info(`Clicking element: ${this.locator}`);
-    await this.getLocator().click();
+   async click(): Promise<void> {
+    try {
+      logger.info(`Clicking element: ${this.locator}`);
+      await this.getLocator().click();
+    } catch (error) {
+      logger.error(`Failed to click element: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
+ 
   async hover(): Promise<void> {
-    logger.info(`Hovering element: ${this.locator}`);
-    await this.getLocator().hover();
+    try {
+      logger.info(`Hovering element: ${this.locator}`);
+      await this.getLocator().hover();
+    } catch (error) {
+      logger.error(`Failed to hover element: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
+ 
   async focus(): Promise<void> {
-    logger.info(`Focusing element: ${this.locator}`);
-    await this.getLocator().focus();
+    try {
+      logger.info(`Focusing element: ${this.locator}`);
+      await this.getLocator().focus();
+    } catch (error) {
+      logger.error(`Failed to focus element: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
+ 
   async selectOption(value: string | string[]): Promise<void> {
-    logger.info(`Selecting option "${value}" on element: ${this.locator}`);
-    await this.getLocator().selectOption(value);
+    try {
+      logger.info(`Selecting option "${value}" on element: ${this.locator}`);
+      await this.getLocator().selectOption(value);
+    } catch (error) {
+      logger.error(`Failed to select option "${value}" on element: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
+ 
   async pressKey(key: string): Promise<void> {
-    logger.info(`Pressing key "${key}" on element: ${this.locator}`);
-    await this.getLocator().press(key);
+    try {
+      logger.info(`Pressing key "${key}" on element: ${this.locator}`);
+      await this.getLocator().press(key);
+    } catch (error) {
+      logger.error(`Failed to press key "${key}" on element: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
+ 
   async scrollIntoView(): Promise<void> {
-    logger.info(`Scrolling element into view: ${this.locator}`);
-    await this.getLocator().scrollIntoViewIfNeeded();
+    try {
+      logger.info(`Scrolling element into view: ${this.locator}`);
+      await this.getLocator().scrollIntoViewIfNeeded();
+    } catch (error) {
+      logger.error(`Failed to scroll element into view: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
   // ─── Getters ─────────────────────────────────────────────────────────────────
 
   async getText(): Promise<string> {
@@ -98,14 +127,24 @@ export class BaseElement {
 
   // ─── Assertions ───────────────────────────────────────────────────────────────
 
-  async shouldBeVisible(timeout?: number): Promise<void> {
+  async shouldBeVisible(): Promise<void> {
     logger.info(`Asserting element is visible: ${this.locator}`);
-    await expect(this.getLocator()).toBeVisible({ timeout });
+    await expect(this.getLocator()).toBeVisible();
   }
 
-  async shouldNotBeVisible(timeout?: number): Promise<void> {
+  async shouldBeVisibleSoft(): Promise<void> {
+    logger.info(`Asserting element is visible: ${this.locator}`);
+    await expect.soft(this.getLocator()).toBeVisible();
+  }
+
+  async shouldNotBeVisible(): Promise<void> {
     logger.info(`Asserting element is not visible: ${this.locator}`);
-    await expect(this.getLocator()).not.toBeVisible({ timeout });
+    await expect(this.getLocator()).not.toBeVisible();
+  }
+  
+  async shouldNotBeVisibleSoft(): Promise<void> {
+    logger.info(`Asserting element is not visible: ${this.locator}`);
+    await expect.soft(this.getLocator()).not.toBeVisible();
   }
 
   async shouldBeEnabled(): Promise<void> {
@@ -155,13 +194,13 @@ export class BaseElement {
 
   // ─── Wait Helpers ────────────────────────────────────────────────────────────
 
-  async waitForVisible(timeout?: number): Promise<void> {
+  async waitForVisible(): Promise<void> {
     logger.info(`Waiting for element to be visible: ${this.locator}`);
-    await this.getLocator().waitFor({ state: "visible", timeout });
+    await this.getLocator().waitFor({ state: "visible"});
   }
 
-  async waitForHidden(timeout?: number): Promise<void> {
+  async waitForHidden(): Promise<void> {
     logger.info(`Waiting for element to be hidden: ${this.locator}`);
-    await this.getLocator().waitFor({ state: "hidden", timeout });
+    await this.getLocator().waitFor({ state: "hidden"});
   }
 }

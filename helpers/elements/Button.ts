@@ -3,8 +3,8 @@ import * as allure from "allure-js-commons";
 import { BaseElement } from "./BaseElement";
 import { logger } from "../logger/logger.ts";
 
-export class ButtonElement extends BaseElement {
-    constructor(locator: string, page: Page) {
+export class Button extends BaseElement {
+    constructor(page: Page, locator: string) {
     super(page, locator);
   }
 

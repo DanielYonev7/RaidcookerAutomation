@@ -72,22 +72,33 @@ export class BaseElements {
   // ─── Actions ─────────────────────────────────────────────────────────────────
 
   async clickNth(index: number, options?: Parameters<Locator["click"]>[0]): Promise<void> {
-    logger.info(`Clicking element at index ${index} in collection: ${this.locator}`);
-    await this.getLocator().nth(index).click(options);
+    try {
+      logger.info(`Clicking element at index ${index} in collection: ${this.locator}`);
+      await this.getLocator().nth(index).click(options);
+    } catch (error) {
+      logger.error(`Failed to click element at index ${index} in collection: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
+ 
   async clickFirst(options?: Parameters<Locator["click"]>[0]): Promise<void> {
-    await this.clickNth(0, options);
+    try {
+      logger.info(`Clicking first element in collection: ${this.locator}`);
+      await this.clickNth(0, options);
+    } catch (error) {
+      logger.error(`Failed to click first element in collection: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
-
-  async hoverNth(index: number, options?: Parameters<Locator["hover"]>[0]): Promise<void> {
-    logger.info(`Hovering element at index ${index} in collection: ${this.locator}`);
-    await this.getLocator().nth(index).hover(options);
-  }
-
+ 
   async clickByText(text: string): Promise<void> {
-    logger.info(`Clicking element with text "${text}" in collection: ${this.locator}`);
-    await this.getLocator().filter({ hasText: text }).first().click();
+    try {
+      logger.info(`Clicking element with text "${text}" in collection: ${this.locator}`);
+      await this.getLocator().filter({ hasText: text }).first().click();
+    } catch (error) {
+      logger.error(`Failed to click element with text "${text}" in collection: ${this.locator} | Error: ${error}`);
+      throw error;
+    }
   }
 
   // ─── Assertions ───────────────────────────────────────────────────────────────

@@ -3,27 +3,24 @@ import { Page } from "@playwright/test";
 import * as allure from "allure-js-commons";
 import fs from "fs";
 import { getLogFilePath } from "../helpers/logger/logger.ts"
+import { LandingPage } from "../POM/landing_page/LandingPage.ts"
 
-export class Application {
-  //dashboardPage: DashboardPage;
-  //profilePage: ProfilePage;
- 
-  constructor(page: Page) {
-    //this.dashboardPage = new DashboardPage(page);
-    //this.profilePage   = new ProfilePage(page);
-  }
+interface PageFixtures{
+  pageSection: PageSections
 }
  
  
-type CustomFixtures = {
-  pageSection: Application;
-};
+interface PageSections{
+  landingPage: LandingPage
+}
  
-export const test = base.extend<CustomFixtures>({
+export const test = base.extend<PageFixtures>({
   pageSection: async ({ page }, use, testInfo) => {
-    const app = new Application(page);
+    const pageSection: PageSections ={
+      landingPage: new LandingPage(page)
+    }
  
-    await use(app);
+    await use(pageSection);
  
     try {
       const logPath = getLogFilePath();
