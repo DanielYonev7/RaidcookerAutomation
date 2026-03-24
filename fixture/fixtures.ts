@@ -1,9 +1,10 @@
 import { test as base } from "@playwright/test";
-import { Page } from "@playwright/test";
 import * as allure from "allure-js-commons";
 import fs from "fs";
 import { getLogFilePath } from "../helpers/logger/logger.ts"
 import { LandingPage } from "../POM/landing_page/LandingPage.ts"
+import { Header } from "../POM/header/Header.ts";
+import { MyProfilePage } from "../POM/my_profile_page/MyProfilePage.ts";
 
 interface PageFixtures{
   pageSection: PageSections
@@ -12,12 +13,19 @@ interface PageFixtures{
  
 interface PageSections{
   landingPage: LandingPage
+  header: Header
+  myProfilePage: MyProfilePage
 }
  
 export const test = base.extend<PageFixtures>({
   pageSection: async ({ page }, use, testInfo) => {
+    
     const pageSection: PageSections ={
-      landingPage: new LandingPage(page)
+      //Initialize all page object instances
+      landingPage: new LandingPage(page),
+      header: new Header(page),
+      myProfilePage: new MyProfilePage(page)
+
     }
  
     await use(pageSection);
