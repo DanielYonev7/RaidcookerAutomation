@@ -13,7 +13,7 @@ export class LandingPage extends BasePage{
     onePlatformText: BaseElement
     titleDescription: BaseElement
 
-    //lower page section
+    //middle page section
     whatsInsideText: BaseElement
     builtForOfficersText: BaseElement
 
@@ -29,6 +29,10 @@ export class LandingPage extends BasePage{
     permissionControl: GridCard
     battleNetSync: GridCard
     multiGuildSupport: GridCard
+
+    //lower section
+    readyToCookText: BaseElement
+    connectAccountText: BaseElement
 
 
     constructor(page: Page){
@@ -49,6 +53,8 @@ export class LandingPage extends BasePage{
         this.permissionControl = new GridCard(page, "Permission Control")
         this.battleNetSync = new GridCard(page, "Battle.net Sync")
         this.multiGuildSupport = new GridCard(page, "Multi-guild Support")
+        this.readyToCookText = new BaseElement(page, "//h2[contains(normalize-space(), 'Ready to cook?')]")
+        this.connectAccountText = new BaseElement(page, "//p[contains(normalize-space(), 'Connect your Battle.net')]")
     }
 
     async clickUpperGetStartedButton(): Promise<void>{
@@ -64,5 +70,9 @@ export class LandingPage extends BasePage{
     async clickSeeFeaturesButton(): Promise<void>{
         logger.info("Clicking 'See features' button")
         await this.seeFeaturesButton.click()
+    }
+    async navigateTo(): Promise<void> {
+        logger.info("Navigating to 'Landing page' url")
+        await this.page.goto("/")
     }
 }
