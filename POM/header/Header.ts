@@ -16,7 +16,6 @@ export class Header {
     }
 
     async clickLoginButton(): Promise<void>{
-        logger.info("Clicking `Login with Battle.net`")
         await this.loginButton.click()
     }
 }

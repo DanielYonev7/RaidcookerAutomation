@@ -3,6 +3,7 @@ import { BasePage } from "../../helpers/base_page/BasePage";
 import { BaseElement } from "../../helpers/elements/BaseElement";
 import { Button } from "../../helpers/elements/Button";
 import { logger } from "../../helpers/logger/logger";
+import  {RegionOptions}  from "../shared/region/RegionOptions";
 
 
 export class MyProfilePage extends BasePage{
@@ -18,7 +19,8 @@ export class MyProfilePage extends BasePage{
     regionDescriptionText: BaseElement
 
     //Dropdown
-    regionSelect: BaseElement
+    regionDropDown: BaseElement
+    regionOptions: RegionOptions
     
     region = {
         EU: "eu",
@@ -38,6 +40,7 @@ export class MyProfilePage extends BasePage{
 
     constructor(page: Page){
         super(page)
+        this.regionOptions = new RegionOptions(page)
 
         this.accountName = new BaseElement(page, "//h1")
         this.refreshAccountDataButton = new Button(page, "//button[contains(normalize-space(), 'Refresh account data')]")
@@ -45,7 +48,7 @@ export class MyProfilePage extends BasePage{
         this.preferencesTitle = new BaseElement(page, "//h2[contains(normalize-space(), 'Preferences')]")
         this.preferredRegionText = new BaseElement(page, "//p[contains(normalize-space(), 'Preferred region')]")
         this.regionDescriptionText = new BaseElement(page, "//p[contains(normalize-space(), 'Used as default for guild search and login')]")
-        this.regionSelect = new BaseElement(page, "select[name='preferredRegion']")
+        this.regionDropDown = new BaseElement(page, "select[name='preferredRegion']")
         this.saveButton = new Button(page, "//button[contains(normalize-space(), 'Save')]")
         this.activeGuildsTitle = new BaseElement(page, "//h2[contains(normalize-space(), 'Active guilds')]")
         this.addGuildButton = new Button(page, "//a[contains(normalize-space(), '+ Add guild')]")
@@ -54,22 +57,18 @@ export class MyProfilePage extends BasePage{
     }
 
     async regionSelectEU(): Promise<void>{
-        logger.info("Selecting EU region from the drop-down")
-        await this.regionSelect.selectOption(this.region.EU)
+        await this.regionOptions.regionSelectEU(this.regionDropDown)
     }
-
+            
     async regionSelectUS(): Promise<void> {
-        logger.info("Selecting US region from the drop-down");
-        await this.regionSelect.selectOption(this.region.US);
+        await this.regionOptions.regionSelectUS(this.regionDropDown)
     }
-
+            
     async regionSelectKR(): Promise<void> {
-        logger.info("Selecting KR region from the drop-down");
-        await this.regionSelect.selectOption(this.region.KR);
+        await this.regionOptions.regionSelectKR(this.regionDropDown)
     }
-
+            
     async regionSelectTW(): Promise<void> {
-        logger.info("Selecting TW region from the drop-down");
-        await this.regionSelect.selectOption(this.region.TW);
+        await this.regionOptions.regionSelectTW(this.regionDropDown)
     }
 }

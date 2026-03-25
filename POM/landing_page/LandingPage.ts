@@ -72,21 +72,17 @@ export class LandingPage extends BasePage{
     }
 
     async clickUpperGetStartedButton(): Promise<void>{
-        logger.info("Clicking upper 'Get Started' button")
         await this.upperGetStartedButton.click()
     }
 
     async clickLowerGetStartedButton(): Promise<void>{
-        logger.info("Clicking lower 'Get Started' button")
         await this.lowerGetStartedButton.click()
     }
 
     async clickSeeFeaturesButton(): Promise<void>{
-        logger.info("Clicking 'See features' button")
         await this.seeFeaturesButton.click()
     }
     async navigateTo(): Promise<void> {
-        logger.info("Navigating to 'Landing page' url")
         await this.page.goto("/")
     }
 }

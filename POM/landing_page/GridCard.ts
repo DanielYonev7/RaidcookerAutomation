@@ -25,12 +25,10 @@ export class GridCard {
 
 
     async getCardTitle(): Promise<void>{
-        logger.info(`Getting title name of card with name: ${this.name}`)
         await this.cardTitle.getText()
     }
 
     async getCardDescription(): Promise<void>{
-        logger.info(`Getting description of card with name: ${this.name}`)
         await this.cardDescription.getText()
     }
 
