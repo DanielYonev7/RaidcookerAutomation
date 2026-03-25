@@ -17,22 +17,18 @@ export class RegionOptions {
         }
 
     async regionSelectEU(locator: BaseElement): Promise<void>{
-        logger.info("Selecting EU region from the drop-down")
         await locator.selectOption(this.region.EU)
     }
         
     async regionSelectUS(locator: BaseElement): Promise<void> {
-        logger.info("Selecting US region from the drop-down");
         await locator.selectOption(this.region.US);
     }
         
     async regionSelectKR(locator: BaseElement): Promise<void> {
-        logger.info("Selecting KR region from the drop-down");
         await locator.selectOption(this.region.KR);
     }
         
     async regionSelectTW(locator: BaseElement): Promise<void> {
-        logger.info("Selecting TW region from the drop-down");
         await locator.selectOption(this.region.TW);
     }
 
