@@ -1,6 +1,5 @@
 import { Page } from "@playwright/test";
 import { BaseElement } from "../../helpers/elements/BaseElement";
-import { logger } from "../../helpers/logger/logger.ts"
 
 export class GridCard {
 

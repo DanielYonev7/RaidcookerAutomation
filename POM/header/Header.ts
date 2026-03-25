@@ -1,7 +1,6 @@
 import { Page } from "@playwright/test";
 import { BaseElement } from "../../helpers/elements/BaseElement.ts";
 import { Button } from "../../helpers/elements/Button.ts";
-import { logger } from "../../helpers/logger/logger.ts";
 
 export class Header {
     page: Page

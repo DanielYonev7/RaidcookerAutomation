@@ -1,5 +1,4 @@
-import { Locator, Page } from "@playwright/test"
-import { logger } from "../../../helpers/logger/logger"
+import { Page } from "@playwright/test"
 import { BaseElement } from "../../../helpers/elements/BaseElement"
 
 export class RegionOptions {

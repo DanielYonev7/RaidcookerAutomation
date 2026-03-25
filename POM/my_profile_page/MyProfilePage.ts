@@ -2,7 +2,6 @@ import { Page } from "@playwright/test";
 import { BasePage } from "../../helpers/base_page/BasePage";
 import { BaseElement } from "../../helpers/elements/BaseElement";
 import { Button } from "../../helpers/elements/Button";
-import { logger } from "../../helpers/logger/logger";
 import  {RegionOptions}  from "../shared/region/RegionOptions";
 
 

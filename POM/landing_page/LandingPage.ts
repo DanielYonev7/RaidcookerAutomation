@@ -3,7 +3,6 @@ import { BasePage } from "../../helpers/base_page/BasePage.ts";
 import { BaseElement } from "../../helpers/elements/BaseElement.ts";
 import { Button } from "../../helpers/elements/Button.ts";
 import { GridCard } from "./GridCard.ts";
-import { logger } from "../../helpers/logger/logger.ts";
 
 export class LandingPage extends BasePage{
 
