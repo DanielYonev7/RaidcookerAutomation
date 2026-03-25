@@ -41,4 +41,4 @@ log4js.configure({
 
 export const logger = log4js.getLogger();
 logger.level = "info";
-export const getLogFilePath = (): string => LOG_FILE;
+export const getLogFilePath = (): string => LOG_FILE
