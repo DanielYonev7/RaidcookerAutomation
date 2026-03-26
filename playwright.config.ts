@@ -62,7 +62,7 @@ projects: [
   {
     name: "Chromium cookie storage and login",
     testDir: "./tests",
-    testMatch: "**/storage_setup/auth.spec.ts",
+    testMatch: "**/login/Login.spec.ts",
     use: {
       ...devices["Desktop Chrome"],
       storageState: undefined,
@@ -72,7 +72,7 @@ projects: [
     name: "Chromium main tests",
     testDir: "./tests",
     testMatch: "**/*.spec.ts",
-    testIgnore: ["**/Login.spec.ts", "**/storage_setup/auth.spec.ts"],
+    testIgnore: ["**/Login.spec.ts"],
     use: {
       ...devices["Desktop Chrome"],
       storageState: "./storage/auth-chromium.json",
@@ -85,7 +85,7 @@ projects: [
   {
     name: "Firefox cookie storage and login",
     testDir: "./tests",
-    testMatch: "**/storage_setup/auth.spec.ts",
+    testMatch: "**/login/Login.spec.ts",
     use: {
       ...devices["Desktop Firefox"],
       storageState: undefined,
@@ -95,7 +95,7 @@ projects: [
     name: "Firefox main tests",
     testDir: "./tests",
     testMatch: "**/*.spec.ts",
-    testIgnore: ["**/Login.spec.ts", "**/storage_setup/auth.spec.ts"],
+    testIgnore: ["**/Login.spec.ts"],
     use: {
       ...devices["Desktop Firefox"],
       storageState: "./storage/auth-firefox.json",
@@ -108,7 +108,7 @@ projects: [
   {
     name: "WebKit cookie storage and login",
     testDir: "./tests",
-    testMatch: "**/storage_setup/auth.spec.ts",
+    testMatch: "**/login/Login.spec.ts",
     use: {
       ...devices["Desktop Safari"],
       storageState: undefined,
@@ -118,7 +118,7 @@ projects: [
     name: "WebKit main tests",
     testDir: "./tests",
     testMatch: "**/*.spec.ts",
-    testIgnore: ["**/Login.spec.ts", "**/storage_setup/auth.spec.ts"],
+    testIgnore: ["**/Login.spec.ts"],
     use: {
       ...devices["Desktop Safari"],
       storageState: "./storage/auth-webkit.json",
