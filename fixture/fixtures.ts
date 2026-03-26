@@ -5,6 +5,8 @@ import { getLogFilePath } from "../helpers/logger/logger.ts"
 import { LandingPage } from "../POM/landing_page/LandingPage.ts"
 import { Header } from "../POM/header/Header.ts";
 import { MyProfilePage } from "../POM/my_profile_page/MyProfilePage.ts";
+import { SignInPage } from "../POM/sign_in_page/SignInPage.ts"
+import { LoginPage } from "../POM/login_page/LoginPage.ts";
 
 interface PageFixtures{
   pageSection: PageSections
@@ -15,6 +17,8 @@ interface PageSections{
   landingPage: LandingPage
   header: Header
   myProfilePage: MyProfilePage
+  signInPage: SignInPage
+  loginPage: LoginPage
 }
  
 export const test = base.extend<PageFixtures>({
@@ -24,7 +28,9 @@ export const test = base.extend<PageFixtures>({
       //Initialize all page object instances
       landingPage: new LandingPage(page),
       header: new Header(page),
-      myProfilePage: new MyProfilePage(page)
+      myProfilePage: new MyProfilePage(page),
+      signInPage: new SignInPage(page),
+      loginPage: new LoginPage(page)
 
     }
  

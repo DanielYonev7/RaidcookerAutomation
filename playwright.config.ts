@@ -6,7 +6,6 @@ const ALLURE_RESULTS_DIR = "allure-results";
 export default defineConfig({
   // ── Test discovery ──────────────────────────────────────────────────────────
   testDir: "./tests",
-  testMatch: "**/*.spec.ts",
 
   // ── Execution settings ──────────────────────────────────────────────────────
   fullyParallel: false,
@@ -57,19 +56,74 @@ export default defineConfig({
   outputDir: path.resolve("test-results"),
 
   // ── Projects (browsers) ────────────────────────────────────────────────────
-  projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+  
+projects: [
+  // ── Chromium ──────────────────────────────────────────────────────────────
+  {
+    name: "Chromium cookie storage and login",
+    testDir: "./tests",
+    testMatch: "**/storage_setup/auth.spec.ts",
+    use: {
+      ...devices["Desktop Chrome"],
+      storageState: undefined,
     },
-    // Uncomment to run on additional browsers:
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-  ],
+  },
+  {
+    name: "Chromium main tests",
+    testDir: "./tests",
+    testMatch: "**/*.spec.ts",
+    testIgnore: ["**/Login.spec.ts", "**/storage_setup/auth.spec.ts"],
+    use: {
+      ...devices["Desktop Chrome"],
+      storageState: "./storage/auth-chromium.json",
+    },
+    dependencies: ["Chromium cookie storage and login"],
+  },
+
+
+  // ── Firefox ───────────────────────────────────────────────────────────────
+  {
+    name: "Firefox cookie storage and login",
+    testDir: "./tests",
+    testMatch: "**/storage_setup/auth.spec.ts",
+    use: {
+      ...devices["Desktop Firefox"],
+      storageState: undefined,
+    },
+  },
+  {
+    name: "Firefox main tests",
+    testDir: "./tests",
+    testMatch: "**/*.spec.ts",
+    testIgnore: ["**/Login.spec.ts", "**/storage_setup/auth.spec.ts"],
+    use: {
+      ...devices["Desktop Firefox"],
+      storageState: "./storage/auth-firefox.json",
+    },
+    dependencies: ["Firefox cookie storage and login"],
+  },
+
+
+  // ── WebKit ────────────────────────────────────────────────────────────────
+  {
+    name: "WebKit cookie storage and login",
+    testDir: "./tests",
+    testMatch: "**/storage_setup/auth.spec.ts",
+    use: {
+      ...devices["Desktop Safari"],
+      storageState: undefined,
+    },
+  },
+  {
+    name: "WebKit main tests",
+    testDir: "./tests",
+    testMatch: "**/*.spec.ts",
+    testIgnore: ["**/Login.spec.ts", "**/storage_setup/auth.spec.ts"],
+    use: {
+      ...devices["Desktop Safari"],
+      storageState: "./storage/auth-webkit.json",
+    },
+    dependencies: ["WebKit cookie storage and login"],
+  },
+],
 });

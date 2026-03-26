@@ -1,35 +1,114 @@
-[2026-03-25 10:55:13] [INFO] Navigating to 'Landing page' url
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'World of Warcraft · Guild Management')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //h1[contains(normalize-space(), 'Your raid team.')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //span[contains(normalize-space(), 'One platform.')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'From roster management')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //div[@class='flex items-center gap-4']//a[@href="/get-started"]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //a[@href="#features"]
-[2026-03-25 10:55:13] [INFO] Clicking 'See features' button
-[2026-03-25 10:55:13] [INFO] Clicking element: //a[@href="#features"]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //p[contains(text(), concat("What", "'", "s inside"))]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //h2[contains(text(), 'Built for officers,')]
-[2026-03-25 10:55:13] [INFO] Scrolling element into view: //h2[contains(normalize-space(), 'Ready to cook?')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //h2[contains(normalize-space(), 'Ready to cook?')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'Connect your Battle.net')]
-[2026-03-25 10:55:13] [INFO] Asserting element is visible: //section[@class='px-8 py-24']//a[@href="/get-started"]
-[2026-03-25 10:55:14] [INFO] Navigating to 'Landing page' url
-[2026-03-25 10:55:14] [INFO] Scrolling element into view: //p[contains(text(), concat("What", "'", "s inside"))]
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//span
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//h3
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//p
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//span
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//h3
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//p
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//span
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//h3
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//p
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//span
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//h3
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//p
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//span
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//h3
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//p
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//span
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//h3
-[2026-03-25 10:55:14] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//p
+[2026-03-26 11:16:39] [INFO] Clicking element: //a[contains(normalize-space(), ' Login with Battle.net')]
+[2026-03-26 11:16:39] [INFO] Clicking element: button[id="login-btn"]
+[2026-03-26 11:16:40] [INFO] Clicking element: //a[contains(normalize-space(), ' Login with Battle.net')]
+[2026-03-26 11:16:40] [INFO] Clicking element: button[id="login-btn"]
+[2026-03-26 11:16:40] [INFO] Adding text "throwawayraid4321@abv.bg" to input: input[id='accountName']
+[2026-03-26 11:16:43] [INFO] Adding text "throwawayraid4321@abv.bg" to input: input[id='accountName']
+[2026-03-26 11:16:43] [INFO] Clicking element: button[id='submit']
+[2026-03-26 11:16:43] [INFO] Clicking element: button[id='submit']
+[2026-03-26 11:16:44] [INFO] Clicking element: //a[contains(normalize-space(), ' Login with Battle.net')]
+[2026-03-26 11:16:44] [INFO] Clicking element: button[id="login-btn"]
+[2026-03-26 11:16:44] [INFO] Adding text "111111vV#!" to input: input[id='password']
+[2026-03-26 11:16:45] [INFO] Clicking element: button[aria-label='Log in']
+[2026-03-26 11:16:45] [INFO] Adding text "throwawayraid4321@abv.bg" to input: input[id='accountName']
+[2026-03-26 11:16:45] [INFO] Adding text "111111vV#!" to input: input[id='password']
+[2026-03-26 11:16:46] [INFO] Clicking element: button[aria-label='Log in']
+[2026-03-26 11:16:46] [INFO] Clicking element: button[id='submit']
+[2026-03-26 11:16:47] [INFO] Adding text "111111vV#!" to input: input[id='password']
+[2026-03-26 11:16:47] [INFO] Clicking element: button[aria-label='Log in']
+[2026-03-26 11:16:52] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'World of Warcraft · Guild Management')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //h1[contains(normalize-space(), 'Your raid team.')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //span[contains(normalize-space(), 'One platform.')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'From roster management')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //div[@class='flex items-center gap-4']//a[@href="/get-started"]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //a[@href="#features"]
+[2026-03-26 11:16:53] [INFO] Clicking element: //a[@href="#features"]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //p[contains(text(), concat("What", "'", "s inside"))]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //h2[contains(text(), 'Built for officers,')]
+[2026-03-26 11:16:53] [INFO] Scrolling element into view: //h2[contains(normalize-space(), 'Ready to cook?')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //h2[contains(normalize-space(), 'Ready to cook?')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'Connect your Battle.net')]
+[2026-03-26 11:16:53] [INFO] Asserting element is visible: //section[@class='px-8 py-24']//a[@href="/get-started"]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'World of Warcraft · Guild Management')]
+[2026-03-26 11:16:54] [INFO] Scrolling element into view: //p[contains(text(), concat("What", "'", "s inside"))]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //h1[contains(normalize-space(), 'Your raid team.')]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //span[contains(normalize-space(), 'One platform.')]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'From roster management')]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='flex items-center gap-4']//a[@href="/get-started"]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //a[@href="#features"]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//span
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//h3
+[2026-03-26 11:16:54] [INFO] Clicking element: //a[@href="#features"]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//p
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//span
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//h3
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//p
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//span
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//h3
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//p
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//span
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//h3
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//p
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//span
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//h3
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//p
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//span
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//h3
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//p
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //p[contains(text(), concat("What", "'", "s inside"))]
+[2026-03-26 11:16:54] [INFO] Asserting element is visible: //h2[contains(text(), 'Built for officers,')]
+[2026-03-26 11:16:54] [INFO] Scrolling element into view: //h2[contains(normalize-space(), 'Ready to cook?')]
+[2026-03-26 11:16:55] [INFO] Asserting element is visible: //h2[contains(normalize-space(), 'Ready to cook?')]
+[2026-03-26 11:16:55] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'Connect your Battle.net')]
+[2026-03-26 11:16:55] [INFO] Asserting element is visible: //section[@class='px-8 py-24']//a[@href="/get-started"]
+[2026-03-26 11:16:57] [INFO] Scrolling element into view: //p[contains(text(), concat("What", "'", "s inside"))]
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//span
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//h3
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//p
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//span
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//h3
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//p
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//span
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//h3
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//p
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//span
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//h3
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//p
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//span
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//h3
+[2026-03-26 11:16:57] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//p
+[2026-03-26 11:16:58] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//span
+[2026-03-26 11:16:58] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//h3
+[2026-03-26 11:16:58] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//p
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'World of Warcraft · Guild Management')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //h1[contains(normalize-space(), 'Your raid team.')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //span[contains(normalize-space(), 'One platform.')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'From roster management')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //div[@class='flex items-center gap-4']//a[@href="/get-started"]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //a[@href="#features"]
+[2026-03-26 11:16:59] [INFO] Clicking element: //a[@href="#features"]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //p[contains(text(), concat("What", "'", "s inside"))]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //h2[contains(text(), 'Built for officers,')]
+[2026-03-26 11:16:59] [INFO] Scrolling element into view: //h2[contains(normalize-space(), 'Ready to cook?')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //h2[contains(normalize-space(), 'Ready to cook?')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //p[contains(normalize-space(), 'Connect your Battle.net')]
+[2026-03-26 11:16:59] [INFO] Asserting element is visible: //section[@class='px-8 py-24']//a[@href="/get-started"]
+[2026-03-26 11:17:02] [INFO] Scrolling element into view: //p[contains(text(), concat("What", "'", "s inside"))]
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//span
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//h3
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Roster Management']]//p
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//span
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//h3
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Raid Compositions']]//p
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//span
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//h3
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Loot Sheets']]//p
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//span
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//h3
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Permission Control']]//p
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//span
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//h3
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Battle.net Sync']]//p
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//span
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//h3
+[2026-03-26 11:17:02] [INFO] Asserting element is visible: //div[@class='bg-mono-900 border-mono-700 group rounded-xl border p-6 transition-all hover:-translate-y-0.5 hover:border-white/20'][.//*[text()='Multi-guild Support']]//p

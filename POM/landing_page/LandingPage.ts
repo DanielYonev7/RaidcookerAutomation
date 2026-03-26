@@ -66,7 +66,7 @@ export class LandingPage extends BasePage{
             this.permissionControl,
             this.battleNetSync,
             this.multiGuildSupport,
-    ]
+        ]
 
     }
 

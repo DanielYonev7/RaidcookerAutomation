@@ -4,7 +4,7 @@ import { logger } from "../logger/logger.ts";
 import { expect } from '@playwright/test'
 
 export class InputElement extends BaseElement {
-    constructor(locator: string, page: Page) {
+    constructor(page: Page, locator: string) {
     super(page, locator);
   }
 
@@ -23,7 +23,7 @@ export class InputElement extends BaseElement {
 
   // ─── Assertions ───────────────────────────────────────────────────────────────
 
-  async shouldHaveValue(value: string | RegExp): Promise<void> {   
+  async shouldHaveValue(value: string): Promise<void> {   
     logger.info(`Asserting input: ${this.locator} has value: "${value}"`);
     await expect(this.getLocator()).toHaveValue(value);
 
