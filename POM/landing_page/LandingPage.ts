@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
-import { BasePage } from "../../helpers/base_page/BasePage.ts";
-import { BaseElement } from "../../helpers/elements/BaseElement.ts";
-import { Button } from "../../helpers/elements/Button.ts";
-import { GridCard } from "./GridCard.ts";
+import { BasePage } from "../../helpers/base_page/BasePage";
+import { BaseElement } from "../../helpers/elements/BaseElement";
+import { Button } from "../../helpers/elements/Button";
+import { GridCard } from "./GridCard";
 
 export class LandingPage extends BasePage{
 

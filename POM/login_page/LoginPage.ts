@@ -4,7 +4,6 @@ import { InputElement } from "../../helpers/elements/InputElement";
 import { Button } from "../../helpers/elements/Button";
 import credentials from  "../../test_data/login/credentials.json"
 
-
 export class LoginPage extends BasePage {
 
     email: InputElement

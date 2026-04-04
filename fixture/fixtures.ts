@@ -1,12 +1,12 @@
 import { test as base } from "@playwright/test";
 import * as allure from "allure-js-commons";
 import fs from "fs";
-import { getLogFilePath } from "../helpers/logger/logger.ts"
-import { LandingPage } from "../POM/landing_page/LandingPage.ts"
-import { Header } from "../POM/header/Header.ts";
-import { MyProfilePage } from "../POM/my_profile_page/MyProfilePage.ts";
-import { SignInPage } from "../POM/sign_in_page/SignInPage.ts"
-import { LoginPage } from "../POM/login_page/LoginPage.ts";
+import { getLogFilePath } from "../helpers/logger/logger"
+import { LandingPage } from "../POM/landing_page/LandingPage"
+import { Header } from "../POM/header/Header";
+import { MyProfilePage } from "../POM/my_profile_page/MyProfilePage";
+import { SignInPage } from "../POM/sign_in_page/SignInPage"
+import { LoginPage } from "../POM/login_page/LoginPage";
 
 interface PageFixtures{
   pageSection: PageSections
