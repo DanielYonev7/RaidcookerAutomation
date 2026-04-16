@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
 import { BaseElement } from "./BaseElement";
-import { logger } from "../logger/logger.ts";
+import { logger } from "../logger/logger";
 import { expect } from '@playwright/test'
 
 export class InputElement extends BaseElement {

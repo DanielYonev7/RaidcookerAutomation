@@ -1,7 +1,7 @@
 import { Page, expect } from "@playwright/test";
 import * as allure from "allure-js-commons";
 import { BaseElement } from "./BaseElement";
-import { logger } from "../logger/logger.ts";
+import { logger } from "../logger/logger";
 
 export class Button extends BaseElement {
     constructor(page: Page, locator: string) {
