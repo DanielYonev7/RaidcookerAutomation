@@ -1,4 +1,4 @@
-import { test, expect } from "../../../fixture/fixtures.ts"
+import { test, expect } from "../../../fixture/fixtures"
 import { step } from "allure-js-commons"
 
 test.describe("Landing Page - Element visibility", ()=>{
