@@ -1,5 +1,5 @@
 import { Page, expect } from "@playwright/test";
-import { logger } from "../logger/logger.ts";
+import { logger } from "../logger/logger";
 
 export class BasePage {
   constructor(protected readonly page: Page) {}
