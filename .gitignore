@@ -10,3 +10,5 @@ allure-report
 allure-results
 logs
 storage
+config
+/config

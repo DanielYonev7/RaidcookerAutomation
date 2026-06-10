@@ -8,7 +8,7 @@ export class Button extends BaseElement {
     super(page, locator);
   }
 
-  // ─── Actions ─────────────────────────────────────────────────────────────────
+  // Actions
 
   async doubleClick(): Promise<void> {
     logger.info(`Double clicking button: ${this.locator}`);
@@ -17,7 +17,7 @@ export class Button extends BaseElement {
   }
 
 
-  // ─── State Getters ────────────────────────────────────────────────────────────
+  // State Getters
 
   async isClickable(): Promise<boolean> {
     const visible = await this.getLocator().isVisible();
@@ -45,7 +45,7 @@ export class Button extends BaseElement {
     return focused;
   }
 
-  // ─── Assertions ───────────────────────────────────────────────────────────────
+  // Assertions
 
   async shouldBeClickable(): Promise<void> {
     await allure.step(`Assert button is clickable: ${this.locator}`, async () => {
@@ -76,20 +76,6 @@ export class Button extends BaseElement {
     await allure.step(`Assert button is disabled: ${this.locator}`, async () => {
       logger.info(`Asserting button is disabled: ${this.locator}`);
       await expect(this.getLocator()).toBeDisabled();
-    });
-  }
-
-  async shouldBeVisible(): Promise<void> {
-    await allure.step(`Assert button is visible: ${this.locator}`, async () => {
-      logger.info(`Asserting button is visible: ${this.locator}`);
-      await expect(this.getLocator()).toBeVisible();
-    });
-  }
-
-  async shouldNotBeVisible(): Promise<void> {
-    await allure.step(`Assert button is not visible: ${this.locator}`, async () => {
-      logger.info(`Asserting button is not visible: ${this.locator}`);
-      await expect(this.getLocator()).not.toBeVisible();
     });
   }
 

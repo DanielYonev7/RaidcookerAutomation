@@ -8,7 +8,7 @@ export class InputElement extends BaseElement {
     super(page, locator);
   }
 
-  // ─── Actions ─────────────────────────────────────────────────────────────────
+  // Actions
 
   async fill(value: string): Promise<void> {
     logger.info(`Adding text "${value}" to input: ${this.locator}`);
@@ -21,7 +21,7 @@ export class InputElement extends BaseElement {
     await this.getLocator().clear();
   }
 
-  // ─── Assertions ───────────────────────────────────────────────────────────────
+  // Assertions
 
   async shouldHaveValue(value: string): Promise<void> {   
     logger.info(`Asserting input: ${this.locator} has value: "${value}"`);

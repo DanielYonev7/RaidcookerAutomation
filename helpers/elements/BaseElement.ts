@@ -14,8 +14,7 @@ export class BaseElement {
     return this.page.locator(this.locator);
   }
 
-  // ─── Actions ────────────────────────────────────────────────────────────────
-
+  // Actions
    async click(): Promise<void> {
     try {
       logger.info(`Clicking element: ${this.locator}`);
@@ -75,8 +74,7 @@ export class BaseElement {
       throw error;
     }
   }
-  // ─── Getters ─────────────────────────────────────────────────────────────────
-
+  // Getters
   async getText(): Promise<string> {
     logger.info(`Getting text from element: ${this.locator}`);
     const text = await this.getLocator().innerText();
@@ -125,8 +123,7 @@ export class BaseElement {
     return count;
   }
 
-  // ─── Assertions ───────────────────────────────────────────────────────────────
-
+  //  Assertions
   async shouldBeVisible(): Promise<void> {
     logger.info(`Asserting element is visible: ${this.locator}`);
     await expect(this.getLocator()).toBeVisible();
@@ -192,7 +189,7 @@ export class BaseElement {
     await expect(this.getLocator()).toHaveCSS(property, value);
   }
 
-  // ─── Wait Helpers ────────────────────────────────────────────────────────────
+  // Wait Helpers
 
   async waitForVisible(): Promise<void> {
     logger.info(`Waiting for element to be visible: ${this.locator}`);

@@ -15,7 +15,7 @@ export class BaseElements {
     return this.page.locator(this.locator);
   }
 
-  // ─── Collection Access ────────────────────────────────────────────────────────
+  // Collection Access 
 
   nth(index: number): BaseElement {
     const nthLocator = `${this.locator} >> nth=${index}`;
@@ -37,7 +37,7 @@ export class BaseElements {
     return Array.from({ length: count }, (_, i) => this.nth(i));
   }
 
-  // ─── Getters ──────────────────────────────────────────────────────────────────
+  // Getters 
 
   async getCount(): Promise<number> {
     const count = await this.getLocator().count();
@@ -69,8 +69,7 @@ export class BaseElements {
     return visible;
   }
 
-  // ─── Actions ─────────────────────────────────────────────────────────────────
-
+  // Actions
   async clickNth(index: number, options?: Parameters<Locator["click"]>[0]): Promise<void> {
     try {
       logger.info(`Clicking element at index ${index} in collection: ${this.locator}`);
@@ -101,7 +100,7 @@ export class BaseElements {
     }
   }
 
-  // ─── Assertions ───────────────────────────────────────────────────────────────
+  // Assertions
 
   async shouldBeVisible(timeout?: number): Promise<void> {
     logger.info(`Asserting collection is visible: ${this.locator}`);
@@ -134,8 +133,7 @@ export class BaseElements {
     await expect(this.getLocator()).toContainText(texts);
   }
 
-  // ─── Wait Helpers ─────────────────────────────────────────────────────────────
-
+  // Wait Helpers
   async waitForVisible(timeout?: number): Promise<void> {
     logger.info(`Waiting for collection to be visible: ${this.locator}`);
     await this.getLocator().first().waitFor({ state: "visible", timeout });

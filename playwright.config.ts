@@ -4,17 +4,16 @@ import path from "path";
 const ALLURE_RESULTS_DIR = "allure-results";
 
 export default defineConfig({
-  // ── Test discovery ──────────────────────────────────────────────────────────
-  testDir: "./tests",
+  //Test discovery
 
-  // ── Execution settings ──────────────────────────────────────────────────────
+  //Execution settings
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   timeout: 60_000,
 
-  // ── Reporters ───────────────────────────────────────────────────────────────
+  //Reporters
   reporter: [
     ["list"],
     [
@@ -31,7 +30,7 @@ export default defineConfig({
     ],
   ],
 
-  // ── Shared browser settings ─────────────────────────────────────────────────
+  // Shared browser settings
   use: {
     baseURL: process.env.BASE_URL ?? "http://localhost:4321/",
 
@@ -52,13 +51,13 @@ export default defineConfig({
     navigationTimeout: 30_000,
   },
 
-  // ── Allure output directory ─────────────────────────────────────────────────
+  //  Allure output directory
   outputDir: path.resolve("test-results"),
 
-  // ── Projects (browsers) ────────────────────────────────────────────────────
+  // Projects (browsers)
   
 projects: [
-  // ── Chromium ──────────────────────────────────────────────────────────────
+  // Chromium
   {
     name: "Chromium cookie storage and login",
     testDir: "./tests",
@@ -68,6 +67,7 @@ projects: [
       storageState: undefined,
     },
   },
+  
   {
     name: "Chromium main tests",
     testDir: "./tests",
@@ -81,7 +81,7 @@ projects: [
   },
 
 
-  // ── Firefox ───────────────────────────────────────────────────────────────
+  // Firefox 
   {
     name: "Firefox cookie storage and login",
     testDir: "./tests",
@@ -104,7 +104,7 @@ projects: [
   },
 
 
-  // ── WebKit ────────────────────────────────────────────────────────────────
+  // WebKit
   {
     name: "WebKit cookie storage and login",
     testDir: "./tests",
